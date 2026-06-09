@@ -393,9 +393,6 @@ function stotage_comment_field_to_bottom( $fields ) {
 }
 
 
-/* ------Disable Lazy loading---- */
-add_filter( 'wp_lazy_loading_enabled', '__return_false' );
-
 /* ------ Export Settings ---- */
 add_filter( 'pxl_export_wp_settings', 'stotage_export_wp_settings' );
 function stotage_export_wp_settings($wp_options){
