@@ -1,0 +1,1 @@
+<div class="pxl-el-divider <?php echo esc_attr($settings['pxl_animate']); ?>" data-wow-delay="<?php echo esc_attr($settings['pxl_animate_delay']); ?>ms"></div>

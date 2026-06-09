@@ -1,0 +1,225 @@
+.pxl-accordion {
+    .pxl-accordion--title {
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+    .pxl-accordion--content {
+        display: none;
+    }
+    .pxl-icon--arrow {
+        font-style: normal;
+    }
+}
+
+.pxl-accordion1 {
+    .pxl-accordion--title {
+            position:relative;
+            &:before {
+                position: absolute;
+                content:'';
+                top:-100px;
+                left:-100px;
+                right:-100px;
+                bottom:-100px;
+            }
+        }
+    &.style-1 {
+        .pxl-icon--plus{
+            position:absolute;
+            top: 23px;
+            left: 20px;
+        }
+        .pxl-accordion--title {
+            color: #010101;
+            font-size: 18px;
+            font-weight: 400;
+            @include transition(all 300ms linear 0ms);
+        }
+        .pxl-accordion--content {   
+            margin-top: 17px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px; 
+            margin-bottom: 3px;
+        }
+        .pxl--item {
+            overflow: hidden;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 17px 25px 17px 54px; 
+            position: relative;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.06);
+            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            &.active {
+                background-color: #010101;
+                .pxl-accordion--title { 
+                    color: #fff;
+                }
+                .pxl-icon--plus{ 
+                    &:before,&:after {
+                        background-color: #fff;
+                    }
+
+                }
+                .pxl-icon--plus:after{
+                    transform: rotate(90deg);
+                }
+            }
+            + .pxl--item {
+                margin-top: 16px;
+            }
+        }
+    }
+    &.style-3 {
+        .pxl-icon--plus{
+            position:absolute;
+            top: 23px;
+            left: 20px;
+        }
+        .pxl-accordion--title {
+            fcolor: #010101;
+            font-size: 18px;
+            font-weight: 400;
+            @include transition(all 300ms linear 0ms);
+        }
+        .pxl-accordion--content {   
+            margin-top: 17px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px; 
+            margin-bottom: 3px;
+        }
+        .pxl--item {
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 17px 25px 17px 54px; 
+            position: relative;
+            border: 1px solid transparent;
+            z-index: 1;
+            background: linear-gradient(90deg, #000 0%, rgba(255, 255, 255, 0.2) 15%, rgba(255, 255, 255, 0.2) 85% ,  #000 100%);
+            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            &.active {
+                border-color: rgba(255, 255, 255, 0.2);
+                .pxl-accordion--title { 
+                    color: #fff;
+                }
+                .pxl-icon--plus{ 
+                    &:before,&:after {
+                        background-color: #fff;
+                    }
+
+                }
+                .pxl-icon--plus:after{
+                    transform: rotate(90deg);
+                }
+            }
+            + .pxl--item {
+                margin-top: 16px;
+            }
+        }
+    }
+    &.style-2 {
+        .pxl-icon--plus{
+            position:absolute;
+            top: 50%;
+            transform: translatey(-50%);
+            right: 0px;
+        }
+        .pxl-accordion--title {
+            display: flex;
+            column-gap: 26px;
+            color: #FFF;
+            font-size: 20px;
+            position:relative;
+            font-weight: 500;
+            @include transition(all 300ms linear 0ms);
+            .pxl-step {
+                color: $primary_color;
+            }
+        }
+        .pxl-accordion--content {   
+            margin-top: 16px;
+            color:#C2C2C2;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px; 
+        }
+        .pxl--item {
+            padding: 23px 30px;
+            border-radius: 10px;
+            background-color: #111112;
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            &.active {
+                .pxl-icon--plus:after{
+                    transform: rotate(90deg);
+                }
+            }
+            + div {
+                margin-top: 20px;
+            }
+        }
+    }
+    &.style-4 {
+        .pxl-accordion--title {
+            color: #010101;
+            font-size: 20px;
+            font-weight: 400;
+            position:relative;  
+            padding-left: 20px;
+            line-height: 1; 
+            &:after {
+                position: absolute;
+                content:'';
+                top:0;
+                left:0;
+                width: 1px;  
+                height: 0%;
+                @include transition(all .4s cubic-bezier(.645,.045,.355,1));
+                background-color: $primary_color;              
+            }           
+        }
+        .pxl-accordion--content {
+            margin-top: 16px;
+            color: #949494;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px; 
+            padding-left: 20px;
+            margin-bottom: -1px;
+        }
+        .pxl--item  {
+            position:relative;
+            &:before {
+                position: absolute;
+                content:'';
+                top:0;
+                left:0;
+                width: 1px;  
+                height: 100%;
+                @include transition(all .4s cubic-bezier(.645,.045,.355,1));
+                background-color: #E9E9E9;              
+            }
+            &.active {
+                &:after {
+                    height: 20%;
+                }
+                .pxl-accordion--title:after {
+                    height: calc(100% + 20px);
+                }
+            }
+            + .pxl--item {
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+body.rtl {
+
+}

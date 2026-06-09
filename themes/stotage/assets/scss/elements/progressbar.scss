@@ -1,0 +1,47 @@
+.pxl--progressbar {
+    @include transition(width 1.4s ease);
+    width: 0;
+    &.vertical {
+        @include transition(height 1.4s ease);
+        height: 0;
+    }
+}
+.pxl-progressbar-1 {
+    .pxl-progressbar--wrap {
+        height: 4px;
+        background-color: rgba(255, 255, 255, 0.2);
+        .pxl--progressbar {
+            height: 4px;
+            background-color: $primary_color;
+            position: relative;
+        }
+    }
+    .pxl--meta  {
+        margin-top: 13px;
+    }
+    .pxl--title {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin: 0;
+    }
+    .pxl--percentage {
+        color:  #C2C2C2;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+    .pxl--item + .pxl--item {
+        margin-top: 26px;
+    }
+    &.style-2 {
+        .pxl--title,.pxl--percentage {
+            display: none;
+        }
+    }
+}
+
+body.rtl {
+
+}

@@ -1,0 +1,25 @@
+<?php if($settings['search_type'] == 'popup') : ?>
+	<div class="pxl-search-popup-button pxl-cursor--cta <?php echo esc_attr($settings['style']); ?>">
+		<?php if(!empty($settings['pxl_icon']['value'])) {
+			\Elementor\Icons_Manager::render_icon( $settings['pxl_icon'], [ 'aria-hidden' => 'true', 'class' => '' ], 'i' );
+		} else  if ( !empty($settings['image']['id']) ) { 
+		$image_size = !empty($settings['img_size']) ? $settings['img_size'] : 'full';
+		$img  = pxl_get_image_by_size( array(
+			'attach_id'  => $settings['image']['id'],
+			'thumb_size' => $image_size,
+		) );
+		$thumbnail    = $img['thumbnail'];
+		$thumbnail_url    = $img['url'];
+		?>
+		<?php echo wp_kses_post($thumbnail);}
+		else{ ?>
+			<i class="flaticon flaticon-search"></i>
+		<?php } ?>
+	</div>
+
+	<?php add_action( 'pxl_anchor_target', 'stotage_hook_anchor_search'); ?>
+<?php endif; ?>
+
+<?php if($settings['search_type'] == 'form') : ?>
+	<?php get_search_form(); ?>
+<?php endif; ?>

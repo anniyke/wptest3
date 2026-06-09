@@ -1,0 +1,403 @@
+.z-index-1 {
+    z-index: 1;
+}
+.pxl-icon-reverse {
+    @include transform(scaleX(-1));
+}
+.pxl-icon-middle {
+    position: relative;
+    > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+}
+.pxl-hidden {
+    display: none;
+}
+.color-white {
+    color: #fff;
+}
+.btn-flex {
+    display: inline-flex;
+    align-items: center;
+    i {
+        display: inline-flex;
+    }
+}
+.field-dflex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pxl-text-nowrap {
+    white-space: nowrap;
+}
+
+.pxl--hover-slideup {
+    @include transition(all 0.65s cubic-bezier(0.23, 1, 0.32, 1));
+    &:hover {
+        @include transform(translateY(-5px));
+    }
+}
+.pxl--effect-slide {
+    &:after {
+        transform-origin: right center;
+        -webkit-transform-origin: right center;
+        @include transform(scale(0, 1));
+        @include transition(transform 0.3s cubic-bezier(0.37, 0.31, 0.2, 0.85));
+    }
+    &:hover:after {
+        transform-origin: left center;
+        -webkit-transform-origin: left center;
+        @include transform(scale(1, 1));
+    }
+}
+.d-inline-block {
+    display: inline-block;
+}
+.pxl-d-flex {
+    display: inline-flex;
+}
+.pxl-mw-1200 {
+    max-width: 1200px;
+}
+.fs-17 {
+    font-size: 17px;
+}
+.lt-4 {
+    letter-spacing: -0.03em !important;
+}
+.pxl-text-center {
+    text-align: center;
+    @media #{$max-sm} {
+        .pxl-link-page1  .pxl-item--inner {
+            justify-content: center;
+        }
+    }
+}
+.pxl-text-left {
+    text-align: left;
+}
+.pxl-text-right {
+    text-align: right;
+}
+.pxl-img--mask {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    .pxl--mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-mask-repeat: no-repeat;
+        -ms-mask-repeat: no-repeat;
+        -o-mask-repeat: no-repeat;
+        -webkit-mask-position: center center;
+        -ms-mask-position: center center;
+        -o-mask-position: center center;
+        mask-position: center center;
+        mask-size: cover;
+        -webkit-mask-size: cover;
+    }
+}
+.text-primary {
+    color: $primary_color;
+}
+.text-secondary {
+    color: $secondary_color;
+}
+.pxl-flex-grow {
+    flex-grow: 1;
+}
+.pxl-icon--plus {
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    position: relative;
+    cursor: pointer;
+    &:before, &:after {
+        content: '';
+        background-color: #122a00;
+        position: absolute;
+        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+    }
+    &:before {
+        width: 14px;
+        height: 2px;
+        top: 6px;
+        left: 0;
+    }
+    &:after {
+        width: 2px;
+        height: 14px;
+        left: 6px;
+        top: 0;
+    }
+}
+.pxl-icon--minus {
+    height: 18px;
+    width: 18px;
+    position: relative;
+    cursor: pointer;
+    &:before {
+        content: '';
+        background-color: transparent;
+        position: absolute;
+        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+    }
+    &:before {
+        width: 18px;
+        height: 2px;
+        top: 18px;
+        left: 5px;
+    }
+}
+.pxl-inline-flex {
+    display: inline-flex;
+    align-items: center;
+}
+.pxl-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pxl-flex-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.pxl-flex-middle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pxl-flex-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.pxl-flex-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.pxl-widget-flex {
+    > .elementor-widget-container > div {
+        display: flex;
+    }
+}
+.el-empty:empty, .pxl-empty:empty {
+    display: none !important;
+}
+.pxl-spill {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.pxl-skew {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $primary_color;
+    transform: skew(-9deg);
+    @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+}
+.pxl-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+}
+.pxl-icon--middle {
+    position: relative;
+    * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+    }
+}
+.pxl-item--flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.pxl-item--flexnw {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+} 
+.color-inherit {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+.color-primary {
+    color: $primary_color;
+    fill: $primary_color;
+}
+.color-secondary {
+    color: $secondary_color;
+    fill: $secondary_color;
+}
+.text-gradient {
+    background: linear-gradient(245deg,  var(--gradient-color-from) 34.77%,var(--gradient-color-to) 99.47%);
+    background-color: transparent;
+    background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient-top {
+    @include background-gradient-bottom($gradient_color_to, $gradient_color_from);
+    background-color: transparent;
+    background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient-bottom {
+    @include background-gradient-bottom($gradient_color_from, $gradient_color_to);
+    background-color: transparent;
+    background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.pxl-icon-color-gradient i {
+    @include background-horizontal($gradient_color_from, $gradient_color_to);
+    background-color: transparent;
+    background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.text-gradient-bg {
+    background-color: transparent;
+    background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -o-text-fill-color: transparent;
+    -ms-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+.rm-text-gradient {
+    text-fill-color: inherit;
+    -webkit-text-fill-color: inherit;
+    background-image: none;
+}
+.bg-gradient {
+	@include background-horizontal($gradient_color_from, $gradient_color_to);
+}
+.bg-gradient-bottom {
+    @include background-gradient-bottom($gradient_color_from, $gradient_color_to);
+}
+.ft-theme-default {
+	@include ft_theme_default($ft_theme_default);
+}
+.bg-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pxl-close {
+    @include border-radius(50%);
+    background: rgba(255,255,255,0.7);
+    border: 9px solid transparent;
+    color: #777;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        transform-origin: 50% 50%;
+        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+        background-color: #fff;
+    }
+    &:before {
+        @include transform(rotate(45deg));
+    }
+    &:after {
+        @include transform(rotate(-45deg));
+    }
+    &:hover {
+        &:before, &:after {
+            @include transform(rotate(0deg));
+        }
+    }
+}
+.pxl-left {
+    float: left;
+}
+.pxl-right {
+    float: right;
+}
+.pxl-hide {
+    display: none;
+}
+@media #{$min-xl} {
+    .pxl-hide-xl {
+        display: none !important;
+    }
+}
+@media #{$max-lg} {
+    .pxl-hide-lg {
+        display: none !important;
+    }
+}
+
+@media #{$max-lg2} {
+    .pxl-hide-lg2 {
+        display: none !important;
+    }
+}
+

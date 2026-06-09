@@ -1,0 +1,104 @@
+.pxl--hide-arrow {
+    .pxl-tabs {
+        .pxl-tabs--title{
+            display: none;
+        }
+    }
+}
+.pxl-tabs-slip1{
+    position:relative;
+    .pxl-item--content {
+        position: sticky;
+        top: 100px;
+        margin-top: 50px;
+    }
+}
+.pxl-tabs {
+    .pxl-heading--inner {
+        .pxl-item--title {
+            pointer-events: none;
+        }
+    }
+    .pxl-item--title {
+        cursor: pointer;
+        @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+    }
+    .pxl-item--content {
+        display: none;
+    }
+    .elementor-section.elementor-section-stretched {
+        width: auto !important;
+        left: 0 !important;
+    }
+    &.tab-effect-fade {
+        .pxl-item--content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100% !important;
+            display: block !important;
+            opacity: 0 !important;
+            visibility: hidden;
+            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            &.active {
+                position: static;
+                opacity: 1 !important;
+                visibility: visible;
+            }
+        }
+        .pxl-tabs--content {
+            position: relative;
+        }
+    }
+}
+
+.over-hd {
+    overflow: hidden;
+}
+.pxl-tabs1,.pxl-navigation-tab {
+    text-align: center;
+    .pxl-tabs--title,.pxl-navigation-tab  {
+        display: inline-flex;
+        column-gap: 10px;
+        justify-content: center;
+    }
+    .extra-text {
+        color: #666666;
+        font-size: 16px;
+        display: inline-flex;
+        margin: 0;
+        line-height: 1;
+        column-gap: 9px;
+        align-items: center;
+        margin:0 0 0 5px;
+    }
+    .pxl-tabs--title {
+        display: inline-flex;
+        padding: 6px;
+        border: 1px solid #29292A;
+        border-radius: 100px;
+        .pxl-item--title  {
+            line-height: 30px;
+            color: #fff;
+            border-radius: 100px;
+            padding: 0 10px;
+            font-size: 16px;
+            @include transition(all .25s cubic-bezier(.645,.045,.355,1));
+            &.active {
+                padding: 0 18px;
+                background-color: $primary_color;
+            }
+        }
+    }
+}
+
+/////
+.pxl-tabs--title {
+    .pxl-item--title {
+        cursor: pointer;
+    }
+    .pxl-item--title.active {
+        pointer-events: none;
+    }
+}

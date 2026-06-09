@@ -1,0 +1,52 @@
+.error404 {
+	overflow: hidden;
+	#pxl-main {
+		@media (min-width: 1200px) {
+			//padding: 10px;
+		}
+	}
+	@media (max-width: 1200px) {
+		header {
+			display: none;
+		}
+	}
+	footer {
+		display: none;
+	}
+	.wrap-content-404 {
+		height: 100vh;
+		width: 100%;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		> .elementor {
+			min-width: 100%;
+		}
+	}
+
+	.content-404 .btn {
+		position:relative;
+		z-index: 2;
+		line-height: 50px;
+		svg {
+			margin-right: 32px;
+		}
+		&:hover {
+			color: $four_color;
+		}
+	}
+	.pxl-error-title {
+		margin-top:17px;
+		margin-bottom: 55px;
+		color:#fff;
+		text-align: center;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 1; 
+		letter-spacing: -0.96px;
+	}
+}
